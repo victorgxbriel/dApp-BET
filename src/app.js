@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Adiciona um atraso de 2 segundos antes do redirecionamento
         setTimeout(() => {
           // Redireciona para a página após o login
-          window.location.href = 'http://LOCALHOST/PROJETO_BLOCKCHAIN/casino';
+          window.location.href = './casino';
         }, 2000);
       }
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Adiciona um atraso de 2 segundos antes do redirecionamento
         setTimeout(() => {
           // Redireciona para a página após o login
-          window.location.href = 'http://LOCALHOST/PROJETO_BLOCKCHAIN/casino';
+          window.location.href = './casino';
         }, 7000);
       });
     } catch (error) {
