@@ -1,0 +1,152 @@
+body {
+	background-image: url("https://images.unsplash.com/photo-1515687652280-bf0bb698562a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-size: cover;
+	background-color: #763D16;
+	background-position: top;
+	color: rgba(255, 255, 255, 0.477);
+	margin-top: 100px;
+	
+	
+}
+
+h1 {
+	text-align: center;
+	color: rgb(234, 224, 224);
+}
+
+a {
+	color: rgb(214, 211, 220);
+}
+
+a:hover {
+	color: blue;
+}
+
+#corpo {
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	height: 500px;
+	border-radius: 6px;
+	padding: 20px 30px;
+	background-color: rgba(0, 0, 0, 0.358);
+	box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.2), -4px -4px 7px 3px;
+};
+
+#corpo2 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	height: 1050px;
+	background-color: transparent;
+	border: medium dashed rgb(226, 1, 1);
+}
+
+#tela {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	width: 500px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.23);
+	border: medium solid black;
+}
+
+#botoes {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 85px;
+	width: 460px;
+}
+
+#creditos_txt {
+	margin-left: 80px;
+	margin-top: 30px;
+	font-weight: bold;
+	color: rgb(5, 5, 5);
+	float: left;
+}
+
+#creditos {
+	clear: left;
+	margin-left: 80px;
+	float: left;
+}
+
+#valor_txt {
+	margin-left: 500px;
+	margin-top: 30px;
+	font-weight: bold;
+	color: rgb(7, 7, 7);
+}
+
+#valor {
+	margin-left: 500px;
+}
+
+#slot1 {
+	margin-top: 5px;
+	padding-left: 17px;
+	padding-right: 17px;
+	float: left;
+	border-right: thin dashed black;
+	width: 90px;
+	height: 90px;
+	vertical-align: middle;
+}
+
+#slot2 {
+	margin-top: 5px;
+	padding-left: 17px;
+	padding-right: 17px;
+	float: left;
+	border-right: thin dashed black;
+	width: 90px;
+	height: 90px;
+	vertical-align: middle;
+}
+
+#slot3 {
+	margin-top: 5px;
+	padding-left: 17px;
+	padding-right: 17px;
+	float: left;
+	border-right: thin dashed black;
+	width: 90px;
+	height: 90px;
+	vertical-align: middle;
+}
+
+#slot4 {
+	margin-top: 5px;
+	padding-left: 17px;
+	padding-right: 17px;
+	float: left;
+	width: 90px;
+	height: 90px;
+	vertical-align: middle;
+}
+
+#rodapé {
+	margin-left: 113px
+}
+
+#tabela {
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	height: 900px;
+	border-radius: 6px;
+	padding: 20px 30px;
+	background-color: var(--preto);
+	box-shadow: 3px 3px 6px 2px rgba(255,255,255, 0.3), -4px -4px 7px 3px;
+}
+
+div #creditos_txt, #valor_txt, #tabela{
+	color: white;
+}
+* {
+	text-decoration: none;
+}
