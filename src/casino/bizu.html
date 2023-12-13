@@ -1,0 +1,149 @@
+            const contractAddress = '0x30C7c0Da78415d893842AD648fA2f22667f4244f';
+				const contractABI = [
+                                        {
+                                            "inputs": [],
+                                            "stateMutability": "payable",
+                                            "type": "constructor"
+                                        },
+                                        {
+                                            "anonymous": false,
+                                            "inputs": [
+                                                {
+                                                    "components": [
+                                                        {
+                                                            "internalType": "enum Aposta.Diamonds[4]",
+                                                            "name": "dados",
+                                                            "type": "uint8[4]"
+                                                        },
+                                                        {
+                                                            "internalType": "uint256",
+                                                            "name": "value",
+                                                            "type": "uint256"
+                                                        },
+                                                        {
+                                                            "internalType": "bool",
+                                                            "name": "result",
+                                                            "type": "bool"
+                                                        },
+                                                        {
+                                                            "internalType": "uint256",
+                                                            "name": "ret",
+                                                            "type": "uint256"
+                                                        }
+                                                    ],
+                                                    "indexed": true,
+                                                    "internalType": "struct Aposta.Play",
+                                                    "name": "p",
+                                                    "type": "tuple"
+                                                }
+                                            ],
+                                            "name": "ApostaFeita",
+                                            "type": "event"
+                                        },
+                                        {
+                                            "inputs": [
+                                                {
+                                                    "internalType": "uint256",
+                                                    "name": "_value",
+                                                    "type": "uint256"
+                                                }
+                                            ],
+                                            "name": "apostar",
+                                            "outputs": [
+                                                {
+                                                    "internalType": "enum Aposta.Diamonds[4]",
+                                                    "name": "",
+                                                    "type": "uint8[4]"
+                                                }
+                                            ],
+                                            "stateMutability": "payable",
+                                            "type": "function"
+                                        },
+                                        {
+                                            "inputs": [],
+                                            "name": "resgatar",
+                                            "outputs": [],
+                                            "stateMutability": "payable",
+                                            "type": "function"
+                                        },
+                                        {
+                                            "inputs": [],
+                                            "name": "apostas",
+                                            "outputs": [
+                                                {
+                                                    "components": [
+                                                        {
+                                                            "internalType": "enum Aposta.Diamonds[4]",
+                                                            "name": "dados",
+                                                            "type": "uint8[4]"
+                                                        },
+                                                        {
+                                                            "internalType": "uint256",
+                                                            "name": "value",
+                                                            "type": "uint256"
+                                                        },
+                                                        {
+                                                            "internalType": "bool",
+                                                            "name": "result",
+                                                            "type": "bool"
+                                                        },
+                                                        {
+                                                            "internalType": "uint256",
+                                                            "name": "ret",
+                                                            "type": "uint256"
+                                                        }
+                                                    ],
+                                                    "internalType": "struct Aposta.Play[]",
+                                                    "name": "",
+                                                    "type": "tuple[]"
+                                                }
+                                            ],
+                                            "stateMutability": "view",
+                                            "type": "function"
+                                        },
+                                        {
+                                            "inputs": [],
+                                            "name": "owner",
+                                            "outputs": [
+                                                {
+                                                    "internalType": "address",
+                                                    "name": "",
+                                                    "type": "address"
+                                                }
+                                            ],
+                                            "stateMutability": "view",
+                                            "type": "function"
+                                        },
+                                        {
+                                            "inputs": [],
+                                            "name": "randomDados",
+                                            "outputs": [
+                                                {
+                                                    "internalType": "enum Aposta.Diamonds[4]",
+                                                    "name": "",
+                                                    "type": "uint8[4]"
+                                                }
+                                            ],
+                                            "stateMutability": "view",
+                                            "type": "function"
+                                        },
+                                        {
+                                            "inputs": [
+                                                {
+                                                    "internalType": "enum Aposta.Diamonds[4]",
+                                                    "name": "dados",
+                                                    "type": "uint8[4]"
+                                                }
+                                            ],
+                                            "name": "verificar",
+                                            "outputs": [
+                                                {
+                                                    "internalType": "uint256",
+                                                    "name": "",
+                                                    "type": "uint256"
+                                                }
+                                            ],
+                                            "stateMutability": "pure",
+                                            "type": "function"
+                                        }
+                                    ];
