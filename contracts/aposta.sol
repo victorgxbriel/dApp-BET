@@ -1,6 +1,6 @@
 // Nome: Victor Gabriel Araujo Silva
 // Nome: Israel Hall Leigthon
-// Conta do contrato: 0x30C7c0Da78415d893842AD648fA2f22667f4244f
+// Conta do contrato: 0xC16b22F9f23B1aEb59cE2829321181598Aace7b3
 
 // Seu contrato começa aqui!
   // SPDX-License-Identifier: MIT
@@ -9,7 +9,6 @@ pragma solidity ^0.8.20;
 contract Aposta {
 
     enum Diamonds {
-      Null,
       Sifrao,
       Rose,
       Mesclado,
@@ -36,11 +35,19 @@ contract Aposta {
       return jogadas[msg.sender];
     }
 
-    function apostar(uint _value) external payable returns(Diamonds[4] memory ) {
-      require(_value >= 0, "valor zerado");
+    function saldo() external view returns(uint) {
+      uint val;
+      for(uint i = 0; i < jogadas[msg.sender].length; i++){
+        val += jogadas[msg.sender][i].ret;
+      }
+      return val;
+    }
+
+    function apostar() external payable returns(Diamonds[4] memory ) {
+      require(msg.value > 0, "valor zerado");
       Play memory p;
       p.dados = randomDados();
-      p.value = _value;
+      p.value = msg.value;
       uint mult = verificar(p.dados);
       p.result = mult == 0 ? false : true;
       p.ret = p.value * mult;
@@ -55,8 +62,9 @@ contract Aposta {
       for(uint i = 0; i < jogadas[msg.sender].length; i++){
         valor += jogadas[msg.sender][i].ret; 
       }
-      require(valor >= 0);
+      require(address(this).balance >= valor, "Contrato quebrado");
       payable(msg.sender).transfer(valor);
+      delete jogadas[msg.sender];
     }
 
     function verificar(Diamonds[4] memory dados) public pure returns(uint) {
@@ -115,6 +123,6 @@ contract Aposta {
     }
 
     return d;
-}
+  }
 
 }
