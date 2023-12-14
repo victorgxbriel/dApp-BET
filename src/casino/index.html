@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
   <script type="text/javascript">
     var credito = 0;
-    var aposta = 0.000015; // Alterado para o valor desejado
+    var aposta = 0.000001; // Alterado para o valor desejado
     var slt1, slt2, slt3, slt4;
 
     document.addEventListener('DOMContentLoaded', async () => {
@@ -34,155 +34,162 @@
 
     async function apostar() {
             // Substitua o endereço do contrato e o ABI com os valores reais
-            const contractAddress = '0x63EDa3652a2067e881EE1Adce9b5949b4D0e38c3';
+            const contractAddress = '0xC16b22F9f23B1aEb59cE2829321181598Aace7b3';
             const contractABI = [
-                {
-                    "inputs": [],
-                    "stateMutability": "payable",
-                    "type": "constructor"
-                },
-                {
-                    "anonymous": false,
-                    "inputs": [
-                        {
-                            "components": [
+                            {
+                              "inputs": [],
+                              "stateMutability": "payable",
+                              "type": "constructor"
+                            },
+                            {
+                              "anonymous": false,
+                              "inputs": [
                                 {
-                                    "internalType": "enum Aposta.Diamonds[4]",
-                                    "name": "dados",
-                                    "type": "uint8[4]"
-                                },
-                                {
-                                    "internalType": "uint256",
-                                    "name": "value",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "internalType": "bool",
-                                    "name": "result",
-                                    "type": "bool"
-                                },
-                                {
-                                    "internalType": "uint256",
-                                    "name": "ret",
-                                    "type": "uint256"
+                                  "components": [
+                                    {
+                                      "internalType": "enum Aposta.Diamonds[4]",
+                                      "name": "dados",
+                                      "type": "uint8[4]"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "value",
+                                      "type": "uint256"
+                                    },
+                                    {
+                                      "internalType": "bool",
+                                      "name": "result",
+                                      "type": "bool"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "ret",
+                                      "type": "uint256"
+                                    }
+                                  ],
+                                  "indexed": true,
+                                  "internalType": "struct Aposta.Play",
+                                  "name": "p",
+                                  "type": "tuple"
                                 }
-                            ],
-                            "indexed": true,
-                            "internalType": "struct Aposta.Play",
-                            "name": "p",
-                            "type": "tuple"
-                        }
-                    ],
-                    "name": "ApostaFeita",
-                    "type": "event"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "_value",
-                            "type": "uint256"
-                        }
-                    ],
-                    "name": "apostar",
-                    "outputs": [
-                        {
-                            "internalType": "enum Aposta.Diamonds[4]",
-                            "name": "",
-                            "type": "uint8[4]"
-                        }
-                    ],
-                    "stateMutability": "payable",
-                    "type": "function"
-                },
-                {
-                    "inputs": [],
-                    "name": "resgatar",
-                    "outputs": [],
-                    "stateMutability": "payable",
-                    "type": "function"
-                },
-                {
-                    "inputs": [],
-                    "name": "apostas",
-                    "outputs": [
-                        {
-                            "components": [
+                              ],
+                              "name": "ApostaFeita",
+                              "type": "event"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "apostar",
+                              "outputs": [
                                 {
-                                    "internalType": "enum Aposta.Diamonds[4]",
-                                    "name": "dados",
-                                    "type": "uint8[4]"
-                                },
-                                {
-                                    "internalType": "uint256",
-                                    "name": "value",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "internalType": "bool",
-                                    "name": "result",
-                                    "type": "bool"
-                                },
-                                {
-                                    "internalType": "uint256",
-                                    "name": "ret",
-                                    "type": "uint256"
+                                  "internalType": "enum Aposta.Diamonds[4]",
+                                  "name": "",
+                                  "type": "uint8[4]"
                                 }
-                            ],
-                            "internalType": "struct Aposta.Play[]",
-                            "name": "",
-                            "type": "tuple[]"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function"
-                },
-                {
-                    "inputs": [],
-                    "name": "owner",
-                    "outputs": [
-                        {
-                            "internalType": "address",
-                            "name": "",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function"
-                },
-                {
-                    "inputs": [],
-                    "name": "randomDados",
-                    "outputs": [
-                        {
-                            "internalType": "enum Aposta.Diamonds[4]",
-                            "name": "",
-                            "type": "uint8[4]"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "enum Aposta.Diamonds[4]",
-                            "name": "dados",
-                            "type": "uint8[4]"
-                        }
-                    ],
-                    "name": "verificar",
-                    "outputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "",
-                            "type": "uint256"
-                        }
-                    ],
-                    "stateMutability": "pure",
-                    "type": "function"
-                }
-            ];
+                              ],
+                              "stateMutability": "payable",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "resgatar",
+                              "outputs": [],
+                              "stateMutability": "payable",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "apostas",
+                              "outputs": [
+                                {
+                                  "components": [
+                                    {
+                                      "internalType": "enum Aposta.Diamonds[4]",
+                                      "name": "dados",
+                                      "type": "uint8[4]"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "value",
+                                      "type": "uint256"
+                                    },
+                                    {
+                                      "internalType": "bool",
+                                      "name": "result",
+                                      "type": "bool"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "ret",
+                                      "type": "uint256"
+                                    }
+                                  ],
+                                  "internalType": "struct Aposta.Play[]",
+                                  "name": "",
+                                  "type": "tuple[]"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "owner",
+                              "outputs": [
+                                {
+                                  "internalType": "address",
+                                  "name": "",
+                                  "type": "address"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "randomDados",
+                              "outputs": [
+                                {
+                                  "internalType": "enum Aposta.Diamonds[4]",
+                                  "name": "",
+                                  "type": "uint8[4]"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "saldo",
+                              "outputs": [
+                                {
+                                  "internalType": "uint256",
+                                  "name": "",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [
+                                {
+                                  "internalType": "enum Aposta.Diamonds[4]",
+                                  "name": "dados",
+                                  "type": "uint8[4]"
+                                }
+                              ],
+                              "name": "verificar",
+                              "outputs": [
+                                {
+                                  "internalType": "uint256",
+                                  "name": "",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "stateMutability": "pure",
+                              "type": "function"
+                            }
+                          ];
 
             // ... (continuação da parte 1)
 
@@ -348,25 +355,224 @@
       <img src="img/apostamenos.gif" onMouseDown="this.src='img/apostamenos_p.gif';" onMouseUp="this.src='img/apostamenos.gif';" onclick="apostaMenos();" />
       <img src="img/apostamais.gif" onMouseDown="this.src='img/apostamais_p.gif';" onMouseUp="this.src='img/apostamais.gif';" onclick="apostaMais();" />
       <img src="img/jogar.gif" onMouseDown="this.src='img/jogar_p.gif';" onMouseUp="this.src='img/jogar.gif';" onclick="apostar();" />
+      <img src="img/jogar.gif" onMouseDown="this.src='img/jogar_p.gif';" onMouseUp="this.src='img/jogar.gif';" onclick="resgatar();" />
     </div>
 
     <div id="rodapé">
-      <a href="tabela.html" target='_blank'>Clique aqui para ver a Tabela de prêmios que você poderá ganhar neste jogo!</a>
+      <a href="/src/casino/tabela.html" target='_blank'>Clique aqui para ver a Tabela de prêmios que você poderá ganhar neste jogo!</a>
     </div>
 
   </div>
 
   <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (window.ethereum) {
+        window.web3 = new Web3(window.ethereum);
+
+        try {
+          // Atualizado: 'enable' foi substituído por 'eth_requestAccounts'
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          console.log("MetaMask conectado!");
+        } catch (error) {
+          console.error("Erro ao conectar o MetaMask:", error);
+        }
+      } else {
+        console.error('MetaMask não detectado. Por favor, instale o MetaMask para continuar.');
+      }
+    });
+
+
     function apostaMenos() {
-      if (aposta > 0.000015) { // Valor mínimo permitido
-        aposta -= 0.000015;
+      if (aposta > 0.000001) { // Valor mínimo permitido
+        aposta -= 0.000001;
         document.getElementById('aposta').value = `R$ ${aposta.toFixed(6)}`;
       }
     }
 
     function apostaMais() {
-      aposta += 0.000015;
+      aposta += 0.000001;
       document.getElementById('aposta').value = `R$ ${aposta.toFixed(6)}`;
+    }
+
+    async function resgatar() {
+      try {
+        // Atualizado: Removida a necessidade de 'contract' ser definida antes
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const currentAccount = accounts[0];
+
+        const contractAddress = '0xC16b22F9f23B1aEb59cE2829321181598Aace7b3';
+            const contractABI = [
+                            {
+                              "inputs": [],
+                              "stateMutability": "payable",
+                              "type": "constructor"
+                            },
+                            {
+                              "anonymous": false,
+                              "inputs": [
+                                {
+                                  "components": [
+                                    {
+                                      "internalType": "enum Aposta.Diamonds[4]",
+                                      "name": "dados",
+                                      "type": "uint8[4]"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "value",
+                                      "type": "uint256"
+                                    },
+                                    {
+                                      "internalType": "bool",
+                                      "name": "result",
+                                      "type": "bool"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "ret",
+                                      "type": "uint256"
+                                    }
+                                  ],
+                                  "indexed": true,
+                                  "internalType": "struct Aposta.Play",
+                                  "name": "p",
+                                  "type": "tuple"
+                                }
+                              ],
+                              "name": "ApostaFeita",
+                              "type": "event"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "apostar",
+                              "outputs": [
+                                {
+                                  "internalType": "enum Aposta.Diamonds[4]",
+                                  "name": "",
+                                  "type": "uint8[4]"
+                                }
+                              ],
+                              "stateMutability": "payable",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "resgatar",
+                              "outputs": [],
+                              "stateMutability": "payable",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "apostas",
+                              "outputs": [
+                                {
+                                  "components": [
+                                    {
+                                      "internalType": "enum Aposta.Diamonds[4]",
+                                      "name": "dados",
+                                      "type": "uint8[4]"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "value",
+                                      "type": "uint256"
+                                    },
+                                    {
+                                      "internalType": "bool",
+                                      "name": "result",
+                                      "type": "bool"
+                                    },
+                                    {
+                                      "internalType": "uint256",
+                                      "name": "ret",
+                                      "type": "uint256"
+                                    }
+                                  ],
+                                  "internalType": "struct Aposta.Play[]",
+                                  "name": "",
+                                  "type": "tuple[]"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "owner",
+                              "outputs": [
+                                {
+                                  "internalType": "address",
+                                  "name": "",
+                                  "type": "address"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "randomDados",
+                              "outputs": [
+                                {
+                                  "internalType": "enum Aposta.Diamonds[4]",
+                                  "name": "",
+                                  "type": "uint8[4]"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [],
+                              "name": "saldo",
+                              "outputs": [
+                                {
+                                  "internalType": "uint256",
+                                  "name": "",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "stateMutability": "view",
+                              "type": "function"
+                            },
+                            {
+                              "inputs": [
+                                {
+                                  "internalType": "enum Aposta.Diamonds[4]",
+                                  "name": "dados",
+                                  "type": "uint8[4]"
+                                }
+                              ],
+                              "name": "verificar",
+                              "outputs": [
+                                {
+                                  "internalType": "uint256",
+                                  "name": "",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "stateMutability": "pure",
+                              "type": "function"
+                            }
+                          ];
+
+        const contract = new window.web3.eth.Contract(contractABI, contractAddress);
+
+        // Chama a função resgatar no contrato
+        await contract.methods.resgatar().send({ from: currentAccount });
+
+        // Atualiza o saldo do jogador na tela
+        const saldoContrato = await contract.methods.saldo().call();
+        credito += parseFloat(saldoContrato);
+        document.getElementById('credito').value = `R$ ${credito.toFixed(8)}`;
+
+        console.log('Resgate realizado com sucesso!');
+        iniciarAnimacao();
+      } catch (error) {
+        console.error('Erro ao realizar o resgate:', error);
+      }
     }
   </script>
 

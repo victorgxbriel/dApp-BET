@@ -150,3 +150,7 @@ div #creditos_txt, #valor_txt, #tabela{
 * {
 	text-decoration: none;
 }
+
+#aposta {
+	width: 100px;
+}
